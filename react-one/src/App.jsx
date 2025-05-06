@@ -1,5 +1,6 @@
 
 import './App.css'
+import ToDo from './ToDo';
 
 function App() {
 
@@ -7,6 +8,12 @@ function App() {
   return (
     <>
       <h1>React</h1>
+      <ToDo task='Learn React'></ToDo>
+      <Salami person='Sister' ammount='100' ></Salami>
+      <Salami person='Brother' ammount='150' ></Salami>
+      <Player name='Raju' run='5000'></Player>
+      <Player name ='Sakib' run ='1000'></Player>
+      <Salami person='Neighbour' ammount='75' ></Salami>
       <Develper name="Shohan" uni="NSU" lan="JavaScript" ></Develper>
       <Develper name="Rajesh" uni="NSU" lan="C"></Develper>
       <Develper name="Pal" uni="IUB" lan="Python" ></Develper>
@@ -24,6 +31,44 @@ function App() {
     </>
   )
 }
+
+const Salami = ({person,ammount}) => {
+
+  return(
+    <>
+    <div className='pal'>
+      <p>Salami for: {person}</p>
+      <p>Salami Ammount: {ammount}</p>
+    </div>
+    </>
+  )
+}
+
+
+
+
+
+const Player = ({name,run}) => {
+  return (
+    <>
+      <div style={{
+        color:'orange',
+        border: '2px solid red',
+        borderRadius:'20px',
+        margin: '10px'
+      }}> 
+        <p>Player name : {name} </p>
+        <p>Player run :{run}</p>
+      </div>
+
+    </>
+  )
+
+}
+
+
+
+
 
 const Develper = (props) => {
   // console.log(props.age);
