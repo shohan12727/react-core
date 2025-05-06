@@ -1,0 +1,39 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.pal {
+  color: #f4f4f9;
+  background-color: #1e1e2f;
+  border: 4px solid greenyellow;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.rajesh {
+  border: 2px dotted bisque;
+  border-radius: 40px;
+  background-color: #f0f4f8;
+  color: #2e2e2e;
+  padding: 10px;
+  margin: 10px;
+
+
+}
