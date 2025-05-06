@@ -7,6 +7,12 @@ function App() {
   return (
     <>
       <h1>React</h1>
+      <Develper name="Shohan" uni="NSU" lan="JavaScript" ></Develper>
+      <Develper name="Rajesh" uni="NSU" lan="C"></Develper>
+      <Develper name="Pal" uni="IUB" lan="Python" ></Develper>
+
+      <Student></Student>
+      <Student></Student>
       <Person></Person>
       <RandomOne></RandomOne>
       <RandomOne></RandomOne>
@@ -18,6 +24,70 @@ function App() {
     </>
   )
 }
+
+const Develper = (props) => {
+  // console.log(props.age);
+  // console.log(props.name);
+  // console.log(props);
+  // console.log(props.uni);   
+  // const name = 'Raka'
+  // const lan = 'javaScript'
+  return (
+    <>
+      <div style={{
+        border: '3px solid red',
+        borderRadius: '20px',
+        padding: '20px',
+        color: 'green',
+        margin: '20px'
+      }}>
+        <h2>Developer</h2>
+        <h4>
+          Name: {props.name}
+        </h4>
+        <h4>
+          University: {props.uni}
+        </h4>
+        <h4>
+          Language: {props.lan}
+        </h4>
+      </div>
+
+    </>
+  )
+}
+
+
+
+
+
+const Student = () => {
+  const name = 'PewDiePie';
+  const age = 32;
+  const studentStyle = {
+    color: 'green',
+    border: '2px solid blue',
+    borderRadius: '20px',
+    textAlign: 'center',
+    margin: '20px'
+
+  }
+
+  return (
+    <>
+      <div style={studentStyle}>
+        <h3>Student Information</h3>
+        <p>Hi , I am {name}. I am {age}.I am a professional content
+          creator in YT.. </p>
+      </div>
+    </>
+  )
+
+}
+
+
+
+
 
 function Person() {
   const age = 20;
@@ -91,7 +161,7 @@ const Rajesh = () => {
 const Doctor = () => {
 
 
-  return(
+  return (
     <>
       <div className='rajesh'>
         <h1>List of Doctor most use elements :</h1>
@@ -100,10 +170,23 @@ const Doctor = () => {
           <li> Appointment Scheduling</li>
           <li>Medical Records</li>
         </ol>
-    </div>
-    
+      </div>
+
     </>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default App
