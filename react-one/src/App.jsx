@@ -1,15 +1,56 @@
 
 import './App.css'
+import Book from './Book';
+import Friend from './Friend';
+import Singer from './Singer';
+import Teacher from './Teacher';
 // import ToDo from './ToDo';
 
 function App() {
 
-  const time = 50;
+  // const time = 50;
+  const friends = ['Rakib','Sakib','Raju','Sizan'];
+  const singers = ['atif aslam', 'sazal', 'mc akib', 'mtm cd'];
+  const teachers = ['mtn','akib','anis','ponkos','narayan'];
+  const books = {
+    title: "The Alchemist",
+    author: "Paulo Coelho",
+    pages: 208,
+    isAvailable: true
+};
 
   return (
     <>
       <h1>React</h1>
-      <ToDo
+      
+      {
+        <Book title={books.title}
+        author={books.author}
+        pages={books.pages}
+         ></Book>
+      }
+
+      {
+        teachers.map(teacher => <Teacher teacher={teacher}></Teacher>)
+      }
+
+      {
+        friends.map((friend) => <Friend friend={friend}></Friend> )
+      }
+      {
+        singers.map((singer => <Singer singer={singer}></Singer>))
+      }
+
+
+
+
+
+
+
+
+
+
+      {/* <ToDo
         task='Learn React'
         isDone={true}
         time={time}>
@@ -22,8 +63,8 @@ function App() {
       <ToDo
         task='Practise react'
         isDone={false}>
-      </ToDo>
-      
+      </ToDo> */}
+
 
       <Salami person='Sister' ammount='100' ></Salami>
       <Salami person='Brother' ammount='150' ></Salami>
