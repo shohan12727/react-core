@@ -32,7 +32,7 @@ function App() {
       age: 22
     }
   ];
-  
+
 
 
   const friends = ['Rakib', 'Sakib', 'Raju', 'Sizan'];
@@ -58,15 +58,15 @@ function App() {
     <>
       <h1>React</h1>
       <Users users={users}></Users>
-      
+
 
       {
-        library.map((element) => <Library 
-        key={element.id} 
-        book={element.book} 
-        price={element.price}></Library> )
+        library.map((element) => <Library
+          key={element.id}
+          book={element.book}
+          price={element.price}></Library>)
       }
-    
+
 
       {
         <Book title={books.title}
