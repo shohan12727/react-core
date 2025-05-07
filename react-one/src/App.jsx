@@ -1,18 +1,34 @@
 
 import './App.css'
-import ToDo from './ToDo';
+// import ToDo from './ToDo';
 
 function App() {
 
+  const time = 50;
 
   return (
     <>
       <h1>React</h1>
-      <ToDo task='Learn React'></ToDo>
+      <ToDo
+        task='Learn React'
+        isDone={true}
+        time={time}>
+      </ToDo>
+      <ToDo
+        task='Learn React'
+        isDone={true}
+        time={time}>
+      </ToDo>
+      <ToDo
+        task='Practise react'
+        isDone={false}>
+      </ToDo>
+      
+
       <Salami person='Sister' ammount='100' ></Salami>
       <Salami person='Brother' ammount='150' ></Salami>
       <Player name='Raju' run='5000'></Player>
-      <Player name ='Sakib' run ='1000'></Player>
+      <Player name='Sakib' run='1000'></Player>
       <Salami person='Neighbour' ammount='75' ></Salami>
       <Develper name="Shohan" uni="NSU" lan="JavaScript" ></Develper>
       <Develper name="Rajesh" uni="NSU" lan="C"></Develper>
@@ -32,14 +48,14 @@ function App() {
   )
 }
 
-const Salami = ({person,ammount}) => {
+const Salami = ({ person, ammount }) => {
 
-  return(
+  return (
     <>
-    <div className='pal'>
-      <p>Salami for: {person}</p>
-      <p>Salami Ammount: {ammount}</p>
-    </div>
+      <div className='pal'>
+        <p>Salami for: {person}</p>
+        <p>Salami Ammount: {ammount}</p>
+      </div>
     </>
   )
 }
@@ -48,15 +64,15 @@ const Salami = ({person,ammount}) => {
 
 
 
-const Player = ({name,run}) => {
+const Player = ({ name, run }) => {
   return (
     <>
       <div style={{
-        color:'orange',
+        color: 'orange',
         border: '2px solid red',
-        borderRadius:'20px',
+        borderRadius: '20px',
         margin: '10px'
-      }}> 
+      }}>
         <p>Player name : {name} </p>
         <p>Player run :{run}</p>
       </div>
@@ -220,15 +236,6 @@ const Doctor = () => {
     </>
   )
 }
-
-
-
-
-
-
-
-
-
 
 
 
