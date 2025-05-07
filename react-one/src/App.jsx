@@ -4,30 +4,49 @@ import Book from './Book';
 import Friend from './Friend';
 import Singer from './Singer';
 import Teacher from './Teacher';
+import Library from './Library';
 // import ToDo from './ToDo';
 
 function App() {
 
-  // const time = 50;
-  const friends = ['Rakib','Sakib','Raju','Sizan'];
+
+  const friends = ['Rakib', 'Sakib', 'Raju', 'Sizan'];
   const singers = ['atif aslam', 'sazal', 'mc akib', 'mtm cd'];
-  const teachers = ['mtn','akib','anis','ponkos','narayan'];
+  const teachers = ['mtn', 'akib', 'anis', 'ponkos', 'narayan'];
   const books = {
     title: "The Alchemist",
     author: "Paulo Coelho",
     pages: 208,
     isAvailable: true
-};
+  };
+
+
+  const library = [
+    { id: 1, book: 'mathematics', price: 205 },
+    { id: 2, book: 'physice', price: 205 },
+    { id: 3, book: 'chemistry', price: 205 },
+    { id: 4, book: 'english', price: 205 },
+  ]
+  // const time = 50;
 
   return (
     <>
       <h1>React</h1>
       
+
+      {
+        library.map((element) => <Library 
+        key={element.id} 
+        book={element.book} 
+        price={element.price}></Library> )
+      }
+    
+
       {
         <Book title={books.title}
-        author={books.author}
-        pages={books.pages}
-         ></Book>
+          author={books.author}
+          pages={books.pages}
+        ></Book>
       }
 
       {
@@ -35,7 +54,7 @@ function App() {
       }
 
       {
-        friends.map((friend) => <Friend friend={friend}></Friend> )
+        friends.map((friend) => <Friend friend={friend}></Friend>)
       }
       {
         singers.map((singer => <Singer singer={singer}></Singer>))
