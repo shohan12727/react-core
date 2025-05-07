@@ -6,8 +6,33 @@ import Singer from './Singer';
 import Teacher from './Teacher';
 import Library from './Library';
 // import ToDo from './ToDo';
+import Users from './Users';
 
 function App() {
+
+
+
+  const users = [
+    {
+      id: 1,
+      name: 'Alice Johnson',
+      email: 'alice@example.com',
+      age: 28
+    },
+    {
+      id: 2,
+      name: 'Bob Smith',
+      email: 'bob@example.com',
+      age: 34
+    },
+    {
+      id: 3,
+      name: 'Charlie Davis',
+      email: 'charlie@example.com',
+      age: 22
+    }
+  ];
+  
 
 
   const friends = ['Rakib', 'Sakib', 'Raju', 'Sizan'];
@@ -32,6 +57,7 @@ function App() {
   return (
     <>
       <h1>React</h1>
+      <Users users={users}></Users>
       
 
       {
