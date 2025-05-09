@@ -5,12 +5,12 @@ import './App.css'
 import Batsman from './Batsman'
 import Counter from './Counter'
 import Users from './Users'
+import Comments from './Comments'
+import Photos from './Photos'
+import Posts from './Posts'
 
 function App() {
 
-
-  const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users")
-    .then(res => res.json())
 
   function handleClick() {
     alert('clicked')
@@ -21,17 +21,46 @@ function App() {
 
   }
 
+  const fetchPosts = fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(res => res.json())
+
+
+  const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users")
+    .then(res => res.json())
 
 
 
+  const fetchPhotos = fetch("https://jsonplaceholder.typicode.com/photos")
+    .then(res => res.json())
 
 
 
-
+  const fetchComments = fetch('https://jsonplaceholder.typicode.com/comments')
+    .then(res => res.json())
 
   return (
     <>
       <h3>King Shohan </h3>
+
+      <Suspense fallback={<p>All posts are coming........</p>}>
+        <Posts fetchPosts={fetchPosts}>
+
+        </Posts>
+      </Suspense>
+
+
+      <Suspense fallback={<p>photos............</p>}>
+        <Photos fetchPhotos={fetchPhotos} >
+        </Photos>
+      </Suspense>
+
+      <Suspense fallback={<p>Comment are coming......</p>}>
+        <Comments fetchComments={fetchComments}>
+        </Comments>
+      </Suspense>
+
+
+
       <Suspense fallback={<h2>🌀 Loading...</h2>}>
         <Users fetchUsers={fetchUsers}>
         </Users>
