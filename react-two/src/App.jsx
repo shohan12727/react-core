@@ -8,8 +8,13 @@ import Users from './Users'
 import Comments from './Comments'
 import Photos from './Photos'
 import Posts from './Posts'
+import Albums from './Albams'
 
 function App() {
+
+ 
+ const fetchAlbams = fetch('https://jsonplaceholder.typicode.com/albums')
+ .then(res => res.json())
 
 
   function handleClick() {
@@ -41,6 +46,14 @@ function App() {
   return (
     <>
       <h3>King Shohan </h3>
+    
+      <Suspense fallback={<p>Coming.....</p>}>
+
+             <Albums fetchAlbams={fetchAlbams} >
+
+             </Albums>
+
+      </Suspense>
 
       <Suspense fallback={<p>All posts are coming........</p>}>
         <Posts fetchPosts={fetchPosts}>
