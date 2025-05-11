@@ -1,0 +1,41 @@
+.country{
+    border: 2px solid green;
+    border-radius: 20px;
+
+}
+
+.visit-button,
+.visited-button {
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Specific background colors */
+.visit-button {
+  background-color: green; 
+}
+
+.visited-button {
+  background-color: #777; /* Grey */
+}
+
+/* Hover Effects */
+.visit-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.visited-button:hover {
+  background-color: #5a5a5a;
+  transform: scale(1.05);
+}
+
+/* Optional: Slight click animation */
+.visit-button:active,
+.visited-button:active {
+  transform: scale(0.95);
+}
